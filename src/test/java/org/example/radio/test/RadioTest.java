@@ -108,7 +108,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetCurrentVolume() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setCurrentVolume(56);
         int expected = 56;
         int actual = radio.getCurrentVolume();
@@ -117,7 +117,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetToMaxCurrentVolume() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setCurrentVolume(100);
         int expected = 100;
         int actual = radio.getCurrentVolume();
@@ -126,7 +126,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetToMinCurrentVolume() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setCurrentVolume(0);
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -135,7 +135,7 @@ public class RadioTest {
 
     @Test
     public void shouldPressBelowMinCurrentVolume() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setCurrentVolume(-1);
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -144,7 +144,7 @@ public class RadioTest {
 
     @Test
     public void shouldPressAboveMaxCurrentVolume() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setCurrentVolume(123);
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -153,7 +153,7 @@ public class RadioTest {
 
     @Test
     public void shouldPressIncreaseCurrentVolume() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setCurrentVolume(56);
         radio.increaseVolume();
         int expected = 57;
@@ -163,7 +163,7 @@ public class RadioTest {
 
     @Test
     public void shouldPressIncreaseCurrentVolumeAboveMax() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setCurrentVolume(100);
         radio.increaseVolume();
         int expected = 100;
@@ -173,7 +173,7 @@ public class RadioTest {
 
     @Test
     public void shouldPressDecreaseCurrentVolume() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setCurrentVolume(58);
         radio.decreaseVolume();
         int expected = 57;
@@ -183,7 +183,7 @@ public class RadioTest {
 
     @Test
     public void shouldPressDecreaseCurrentVolumeBelowMin() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setCurrentVolume(0);
         radio.decreaseVolume();
         int expected = 0;
