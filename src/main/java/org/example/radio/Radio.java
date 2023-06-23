@@ -12,7 +12,6 @@ public class Radio {
     public Radio() {
     }
 
-
     public Radio(int quantityRadioStation) {
         this.maxRadioStation = quantityRadioStation - 1;
     }
