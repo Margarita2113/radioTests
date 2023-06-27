@@ -49,7 +49,7 @@ public class RadioTest {
     @Test
     public void shouldPressPrevRadioStation() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation (7);
+        radio.setCurrentRadioStation(7);
         radio.prevCurrentStation();
         int expected = 6;
         int actual = radio.getCurrentRadioStation();
@@ -59,7 +59,7 @@ public class RadioTest {
     @Test
     public void shouldPressPrevRadioStationMax() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation (10);
+        radio.setCurrentRadioStation(10);
         radio.prevCurrentStation();
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
@@ -69,7 +69,7 @@ public class RadioTest {
     @Test
     public void shouldPressPrevRadioStationBelowMin() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation (0);
+        radio.setCurrentRadioStation(0);
         radio.prevCurrentStation();
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
@@ -79,7 +79,7 @@ public class RadioTest {
     @Test
     public void shouldPressPrevRadioStationBelow() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation (-1);
+        radio.setCurrentRadioStation(-1);
         radio.nextCurrentStation();
         int expected = 1;
         int actual = radio.getCurrentRadioStation();
@@ -89,7 +89,7 @@ public class RadioTest {
     @Test
     public void shouldPressNextRadioStation() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation (4);
+        radio.setCurrentRadioStation(4);
         radio.nextCurrentStation();
         int expected = 5;
         int actual = radio.getCurrentRadioStation();
@@ -99,7 +99,7 @@ public class RadioTest {
     @Test
     public void shouldPressNextRadioStationAboveMax() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation (9);
+        radio.setCurrentRadioStation(9);
         radio.nextCurrentStation();
         int expected = 0;
         int actual = radio.getCurrentRadioStation();
@@ -154,7 +154,7 @@ public class RadioTest {
     @Test
     public void shouldPressIncreaseCurrentVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume (56);
+        radio.setCurrentVolume(56);
         radio.increaseVolume();
         int expected = 57;
         int actual = radio.getCurrentVolume();
@@ -164,7 +164,7 @@ public class RadioTest {
     @Test
     public void shouldPressIncreaseCurrentVolumeAboveMax() {
         Radio radio = new Radio();
-        radio.setCurrentVolume (100);
+        radio.setCurrentVolume(100);
         radio.increaseVolume();
         int expected = 100;
         int actual = radio.getCurrentVolume();
@@ -174,7 +174,7 @@ public class RadioTest {
     @Test
     public void shouldPressDecreaseCurrentVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume (58);
+        radio.setCurrentVolume(58);
         radio.decreaseVolume();
         int expected = 57;
         int actual = radio.getCurrentVolume();
@@ -184,7 +184,7 @@ public class RadioTest {
     @Test
     public void shouldPressDecreaseCurrentVolumeBelowMin() {
         Radio radio = new Radio();
-        radio.setCurrentVolume (0);
+        radio.setCurrentVolume(0);
         radio.decreaseVolume();
         int expected = 0;
         int actual = radio.getCurrentVolume();
